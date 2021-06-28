@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  rabbitmq:
+    image: rabbit-jms
+    container_name: rabbitmq
+    restart: "no"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+      RABBITMQ_DEFAULT_VHOST: pf
+
+    ports:
+      - 5672:5672
+      - 15672:15672
+
+
